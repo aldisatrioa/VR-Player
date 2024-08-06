@@ -36,6 +36,11 @@ class VrPlayerController {
     return _channel.invokeMethod('play');
   }
 
+  /// Dispose video
+  Future<void> dispose() {
+    return _channel.invokeMethod('dispose');
+  }
+
   /// Pause video
   Future<void> pause() {
     return _channel.invokeMethod('pause');
