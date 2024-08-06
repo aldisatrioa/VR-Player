@@ -116,7 +116,10 @@ class VideoPlayerController(
             "isPlaying" -> {
                 result.success(player?.isPlaying == true)
             }
-
+            "dispose" -> {
+                dispose()
+                result.success(true)
+            }
             "onSizeChanged" -> {
                 if (mediaEntry?.isVRMediaType == true) {
                     reloadPlayer()
